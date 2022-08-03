@@ -7,7 +7,7 @@ Entities:
       Translation: [14, 0, 0]
       Rotation: [0, 0, 0]
       Scale: [0.5, 18, 1]
-    SpriteComponent:
+    SpriteRendererComponent:
       Color: [0.784313738, 0.784313738, 0.784313738, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
@@ -24,7 +24,7 @@ Entities:
       Translation: [0, -9, 0]
       Rotation: [0, 0, 0]
       Scale: [28, 0.5, 1]
-    SpriteComponent:
+    SpriteRendererComponent:
       Color: [0.784313738, 0.784313738, 0.784313738, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
@@ -41,7 +41,7 @@ Entities:
       Translation: [-14, 0, 0]
       Rotation: [0, 0, 0]
       Scale: [0.5, 18, 1]
-    SpriteComponent:
+    SpriteRendererComponent:
       Color: [0.784313738, 0.784313738, 0.784313738, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
@@ -58,7 +58,7 @@ Entities:
       Translation: [0, 9, 0]
       Rotation: [0, 0, 0]
       Scale: [28, 0.5, 1]
-    SpriteComponent:
+    SpriteRendererComponent:
       Color: [0.784313738, 0.784313738, 0.784313738, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
@@ -90,7 +90,7 @@ Entities:
       Translation: [-12.5, 8, 0]
       Rotation: [0, 0, 0]
       Scale: [2, 1, 1]
-    SpriteComponent:
+    SpriteRendererComponent:
       Color: [0, 1, 0, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
@@ -107,7 +107,7 @@ Entities:
       Translation: [0, -8, 0]
       Rotation: [0, 0, 0]
       Scale: [2, 0.300000012, 1]
-    SpriteComponent:
+    SpriteRendererComponent:
       Color: [1, 1, 1, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
@@ -124,7 +124,7 @@ Entities:
       Translation: [0, -7.5, 0]
       Rotation: [0, 0, 0]
       Scale: [0.300000012, 0.300000012, 1]
-    SpriteComponent:
+    SpriteRendererComponent:
       Color: [0, 0.141176462, 1, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
