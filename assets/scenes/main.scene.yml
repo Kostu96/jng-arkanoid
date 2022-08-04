@@ -87,9 +87,9 @@ Entities:
     TagComponent:
       Tag: Block
     TransformComponent:
-      Translation: [-12.5, 8, 0]
+      Translation: [-12.5, 8.19999981, 0]
       Rotation: [0, 0, 0]
-      Scale: [2, 1, 1]
+      Scale: [2, 0.5, 1]
     SpriteRendererComponent:
       Color: [0, 1, 0, 1]
     BoxCollider2DComponent:
@@ -124,10 +124,13 @@ Entities:
       Translation: [0, -7.5, 0]
       Rotation: [0, 0, 0]
       Scale: [0.300000012, 0.300000012, 1]
-    SpriteRendererComponent:
-      Color: [0, 0.141176462, 1, 1]
-    BoxCollider2DComponent:
-      Size: [0.5, 0.5]
+    CircleRendererComponent:
+      Color: [0.0392156877, 0.0784313753, 0.862745106, 1]
+      Thickness: 1
+      Fade: 0.00499999989
+    CircleCollider2DComponent:
+      Radius: 0.5
+      Offset: [0, 0]
       Density: 1
       Friction: 0.5
       Restitution: 0
