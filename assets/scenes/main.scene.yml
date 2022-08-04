@@ -117,6 +117,8 @@ Entities:
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 1
+    LuaScriptComponent:
+      Path: C:\Users\Konstanty\Desktop\jng-arkanoid\assets\scripts\PlayerController.lua
   - Entity: 7919760356240806629
     TagComponent:
       Tag: Ball
