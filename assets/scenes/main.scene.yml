@@ -17,6 +17,9 @@ Entities:
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      FreezeRotation: false
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001
   - Entity: 8597223196172863982
     TagComponent:
       Tag: BottomWall
@@ -34,6 +37,9 @@ Entities:
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      FreezeRotation: false
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001
   - Entity: 6226378662288558469
     TagComponent:
       Tag: LeftWall
@@ -51,6 +57,9 @@ Entities:
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      FreezeRotation: false
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001
   - Entity: 10055188281328936660
     TagComponent:
       Tag: TopWall
@@ -68,6 +77,9 @@ Entities:
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      FreezeRotation: false
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001
   - Entity: 13981854952416655774
     TagComponent:
       Tag: Camera
@@ -100,6 +112,9 @@ Entities:
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      FreezeRotation: false
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001
   - Entity: 15346625625685970642
     TagComponent:
       Tag: Paddle
@@ -117,6 +132,9 @@ Entities:
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 1
+      FreezeRotation: true
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001
     LuaScriptComponent:
       Path: C:\Users\Konstanty\Desktop\jng-arkanoid\assets\scripts\PlayerController.lua
   - Entity: 7919760356240806629
@@ -138,4 +156,7 @@ Entities:
       Restitution: 0
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
-      BodyType: 1
+      BodyType: 2
+      FreezeRotation: true
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001

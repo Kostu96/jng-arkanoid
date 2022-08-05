@@ -1,6 +1,6 @@
 PlayerController = LuaScript:new()
 
-PlayerController.Speed = 50
+PlayerController.Speed = 100
 
 function PlayerController:onCreate()
     self.rigidbody = self:getComponent(Components.Rigidbody2D)
