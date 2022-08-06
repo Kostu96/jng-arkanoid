@@ -1,14 +1,59 @@
-Scene: Untitled
+Scene: main.scene
 Entities:
-  - Entity: 7090462914834539441
+  - Entity: 7919760356240806629
     TagComponent:
-      Tag: RightWall
+      Tag: Ball
     TransformComponent:
-      Translation: [14, 0, 0]
+      Translation: [0, -7.5, 0]
       Rotation: [0, 0, 0]
-      Scale: [0.5, 18, 1]
+      Scale: [0.300000012, 0.300000012, 1]
+    CircleRendererComponent:
+      Color: [0.0392156877, 0.0784313753, 0.862745106, 1]
+      Thickness: 1
+      Fade: 0.00499999989
+    CircleCollider2DComponent:
+      Radius: 0.5
+      Offset: [0, 0]
+      Density: 1
+      Friction: 0.5
+      Restitution: 0
+      RestitutionThreshold: 0.5
+    Rigidbody2DComponent:
+      BodyType: 2
+      FreezeRotation: true
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001
+  - Entity: 15346625625685970642
+    TagComponent:
+      Tag: Paddle
+    TransformComponent:
+      Translation: [0, -8, 0]
+      Rotation: [0, 0, 0]
+      Scale: [2, 0.300000012, 1]
     SpriteRendererComponent:
-      Color: [0.784313738, 0.784313738, 0.784313738, 1]
+      Color: [1, 1, 1, 1]
+    BoxCollider2DComponent:
+      Size: [0.5, 0.5]
+      Density: 1
+      Friction: 0.5
+      Restitution: 0
+      RestitutionThreshold: 0.5
+    Rigidbody2DComponent:
+      BodyType: 1
+      FreezeRotation: true
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001
+    LuaScriptComponent:
+      Name: PlayerController
+  - Entity: 14435125259857035407
+    TagComponent:
+      Tag: Block
+    TransformComponent:
+      Translation: [-12.5, 8.19999981, 0]
+      Rotation: [0, 0, 0]
+      Scale: [2, 0.5, 1]
+    SpriteRendererComponent:
+      Color: [0, 1, 0, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
       Density: 1
@@ -20,11 +65,26 @@ Entities:
       FreezeRotation: false
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
-  - Entity: 8597223196172863982
+  - Entity: 13981854952416655774
     TagComponent:
-      Tag: BottomWall
+      Tag: Camera
     TransformComponent:
-      Translation: [0, -9, 0]
+      Translation: [0, 0, 0.5]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    CameraComponent:
+      ProjectionType: 0
+      OrthographicSize: 18
+      OrthographicNear: -1
+      OrthographicFar: 1
+      PerspectiveFOV: 45
+      PerspectiveNear: 0.00999999978
+      PerspectiveFar: 1000
+  - Entity: 10055188281328936660
+    TagComponent:
+      Tag: TopWall
+    TransformComponent:
+      Translation: [0, 9, 0]
       Rotation: [0, 0, 0]
       Scale: [28, 0.5, 1]
     SpriteRendererComponent:
@@ -60,11 +120,11 @@ Entities:
       FreezeRotation: false
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
-  - Entity: 10055188281328936660
+  - Entity: 8597223196172863982
     TagComponent:
-      Tag: TopWall
+      Tag: BottomWall
     TransformComponent:
-      Translation: [0, 9, 0]
+      Translation: [0, -9, 0]
       Rotation: [0, 0, 0]
       Scale: [28, 0.5, 1]
     SpriteRendererComponent:
@@ -80,30 +140,15 @@ Entities:
       FreezeRotation: false
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
-  - Entity: 13981854952416655774
+  - Entity: 7090462914834539441
     TagComponent:
-      Tag: Camera
+      Tag: RightWall
     TransformComponent:
-      Translation: [0, 0, 0.5]
+      Translation: [14, 0, 0]
       Rotation: [0, 0, 0]
-      Scale: [1, 1, 1]
-    CameraComponent:
-      ProjectionType: 0
-      OrthographicSize: 18
-      OrthographicNear: -1
-      OrthographicFar: 1
-      PerspectiveFOV: 45
-      PerspectiveNear: 0.00999999978
-      PerspectiveFar: 1000
-  - Entity: 14435125259857035407
-    TagComponent:
-      Tag: Block
-    TransformComponent:
-      Translation: [-12.5, 8.19999981, 0]
-      Rotation: [0, 0, 0]
-      Scale: [2, 0.5, 1]
+      Scale: [0.5, 18, 1]
     SpriteRendererComponent:
-      Color: [0, 1, 0, 1]
+      Color: [0.784313738, 0.784313738, 0.784313738, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
       Density: 1
@@ -113,50 +158,5 @@ Entities:
     Rigidbody2DComponent:
       BodyType: 0
       FreezeRotation: false
-      LinearDamping: 0.100000001
-      AngularDamping: 0.100000001
-  - Entity: 15346625625685970642
-    TagComponent:
-      Tag: Paddle
-    TransformComponent:
-      Translation: [0, -8, 0]
-      Rotation: [0, 0, 0]
-      Scale: [2, 0.300000012, 1]
-    SpriteRendererComponent:
-      Color: [1, 1, 1, 1]
-    BoxCollider2DComponent:
-      Size: [0.5, 0.5]
-      Density: 1
-      Friction: 0.5
-      Restitution: 0
-      RestitutionThreshold: 0.5
-    Rigidbody2DComponent:
-      BodyType: 1
-      FreezeRotation: true
-      LinearDamping: 0.100000001
-      AngularDamping: 0.100000001
-    LuaScriptComponent:
-      Path: C:\Users\Konstanty\Desktop\jng-arkanoid\assets\scripts\PlayerController.lua
-  - Entity: 7919760356240806629
-    TagComponent:
-      Tag: Ball
-    TransformComponent:
-      Translation: [0, -7.5, 0]
-      Rotation: [0, 0, 0]
-      Scale: [0.300000012, 0.300000012, 1]
-    CircleRendererComponent:
-      Color: [0.0392156877, 0.0784313753, 0.862745106, 1]
-      Thickness: 1
-      Fade: 0.00499999989
-    CircleCollider2DComponent:
-      Radius: 0.5
-      Offset: [0, 0]
-      Density: 1
-      Friction: 0.5
-      Restitution: 0
-      RestitutionThreshold: 0.5
-    Rigidbody2DComponent:
-      BodyType: 2
-      FreezeRotation: true
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001

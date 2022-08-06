@@ -1,9 +1,9 @@
-PlayerController = LuaScript:new()
+PlayerController = LuaScript:create()
 
 PlayerController.Speed = 100
 
 function PlayerController:onCreate()
-    self.rigidbody = self:getComponent(Components.Rigidbody2D)
+    self.rigidbody = self:getComponent(Component.Rigidbody2D)
 end
 
 function PlayerController:onUpdate(dt)
@@ -14,7 +14,7 @@ function PlayerController:onUpdate(dt)
         xVel = self.Speed
     end
 
-    self.rigidbody:setVelocity(xVel * dt, 0)
+    self.rigidbody:setLinearVelocity(xVel * dt, 0)
 end
 
 return PlayerController
