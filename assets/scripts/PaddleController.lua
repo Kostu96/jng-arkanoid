@@ -1,6 +1,6 @@
 PaddleController = LuaScript:create()
 
-PaddleController.Speed = 100
+PaddleController.Speed = 10
 
 function PaddleController:onCreate()
     self.rigidbody = self:getComponent(Component.Rigidbody2D)
@@ -14,7 +14,7 @@ function PaddleController:onUpdate(dt)
         xVel = self.Speed
     end
 
-    self.rigidbody:setLinearVelocity(xVel * dt, 0)
+    self.rigidbody:setLinearVelocity(xVel, 0)
 end
 
 return PaddleController
