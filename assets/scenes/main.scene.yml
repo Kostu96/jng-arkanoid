@@ -1,5 +1,19 @@
 Scene: main.scene
 Entities:
+  - Entity: 9229324913916980023
+    TagComponent:
+      Tag: BlockSpawner
+    TransformComponent:
+      Translation: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [1, 1, 1]
+    LuaScriptComponent:
+      Name: BlockSpawner
+      ScriptData:
+        HasOnCreate: true
+        HasOnUpdate: false
+        Properties:
+          []
   - Entity: 7090462914834539441
     TagComponent:
       Tag: RightWall
@@ -11,15 +25,18 @@ Entities:
       Color: [0.784313738, 0.784313738, 0.784313738, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
+      Offset: [0, 0]
       Density: 1
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      Enabled: true
       FreezeRotation: false
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
+      GravityScale: 1
   - Entity: 8597223196172863982
     TagComponent:
       Tag: BottomWall
@@ -31,15 +48,18 @@ Entities:
       Color: [0.784313738, 0.784313738, 0.784313738, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
+      Offset: [0, 0]
       Density: 1
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      Enabled: true
       FreezeRotation: false
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
+      GravityScale: 1
   - Entity: 6226378662288558469
     TagComponent:
       Tag: LeftWall
@@ -51,15 +71,18 @@ Entities:
       Color: [0.784313738, 0.784313738, 0.784313738, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
+      Offset: [0, 0]
       Density: 1
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      Enabled: true
       FreezeRotation: false
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
+      GravityScale: 1
   - Entity: 10055188281328936660
     TagComponent:
       Tag: TopWall
@@ -71,15 +94,18 @@ Entities:
       Color: [0.784313738, 0.784313738, 0.784313738, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
+      Offset: [0, 0]
       Density: 1
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      Enabled: true
       FreezeRotation: false
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
+      GravityScale: 1
   - Entity: 13981854952416655774
     TagComponent:
       Tag: Camera
@@ -103,18 +129,21 @@ Entities:
       Rotation: [0, 0, 0]
       Scale: [2, 0.5, 1]
     SpriteRendererComponent:
-      Color: [0, 1, 0, 1]
+      Color: [1, 0, 0, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
+      Offset: [0, 0]
       Density: 1
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 0
+      Enabled: true
       FreezeRotation: false
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
+      GravityScale: 1
   - Entity: 15346625625685970642
     TagComponent:
       Tag: Paddle
@@ -126,33 +155,36 @@ Entities:
       Color: [1, 1, 1, 1]
     BoxCollider2DComponent:
       Size: [0.5, 0.5]
+      Offset: [0, 0]
       Density: 1
       Friction: 0.5
       Restitution: 0
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 1
+      Enabled: true
       FreezeRotation: true
-      LinearDamping: 0.100000001
-      AngularDamping: 0.100000001
+      LinearDamping: 0
+      AngularDamping: 0
+      GravityScale: 0
     LuaScriptComponent:
-      Name: PlayerController
+      Name: PaddleController
       ScriptData:
         HasOnCreate: true
         HasOnUpdate: true
         Properties:
           - Name: Speed
             Type: 0
-            Value: 90
+            Value: 150
   - Entity: 7919760356240806629
     TagComponent:
       Tag: Ball
     TransformComponent:
-      Translation: [0, -7.5, 0]
+      Translation: [0, 0, 0]
       Rotation: [0, 0, 0]
       Scale: [0.300000012, 0.300000012, 1]
     CircleRendererComponent:
-      Color: [0.0392156877, 0.0784313753, 0.862745106, 1]
+      Color: [0.244244292, 0.818548381, 0.498975843, 1]
       Thickness: 1
       Fade: 0.00499999989
     CircleCollider2DComponent:
@@ -160,10 +192,19 @@ Entities:
       Offset: [0, 0]
       Density: 1
       Friction: 0.5
-      Restitution: 0
+      Restitution: 1
       RestitutionThreshold: 0.5
     Rigidbody2DComponent:
       BodyType: 2
+      Enabled: true
       FreezeRotation: true
-      LinearDamping: 0.100000001
-      AngularDamping: 0.100000001
+      LinearDamping: 0
+      AngularDamping: 0
+      GravityScale: 0
+    LuaScriptComponent:
+      Name: BallController
+      ScriptData:
+        HasOnCreate: true
+        HasOnUpdate: true
+        Properties:
+          []

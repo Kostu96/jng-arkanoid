@@ -1,12 +1,12 @@
-PlayerController = LuaScript:create()
+PaddleController = LuaScript:create()
 
-PlayerController.Speed = 100
+PaddleController.Speed = 100
 
-function PlayerController:onCreate()
+function PaddleController:onCreate()
     self.rigidbody = self:getComponent(Component.Rigidbody2D)
 end
 
-function PlayerController:onUpdate(dt)
+function PaddleController:onUpdate(dt)
     local xVel = 0
     if (Input.isKeyPressed(Input.Key.A)) then
         xVel = -self.Speed
@@ -17,4 +17,4 @@ function PlayerController:onUpdate(dt)
     self.rigidbody:setLinearVelocity(xVel * dt, 0)
 end
 
-return PlayerController
+return PaddleController
