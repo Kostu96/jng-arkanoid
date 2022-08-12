@@ -11,7 +11,7 @@ function BallController:onCreate()
 end
 
 function BallController:respawn()
-    local angle = math.random(0, 180)
+    local angle = math.random(15, 180 - 15)
     local xVel = math.cos(math.rad(angle)) * self.Speed
     local yVel = math.sin(math.rad(angle)) * self.Speed
     self.rigidbody:setLinearVelocity(xVel, yVel)
