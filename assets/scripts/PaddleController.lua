@@ -1,10 +1,10 @@
-PaddleController = LuaScript:create()
+PaddleController = {}
 
 PaddleController.Speed = 10
 PaddleController.XConstrain = 13.75
 
 function PaddleController:onCreate()
-    self.rigidbody = self:getComponent(ComponentTypeID.Rigidbody2D)
+    self.rigidbody = self.entity:getComponent(ComponentTypeID.Rigidbody2D)
 end
 
 function PaddleController:onUpdate(dt)
@@ -12,9 +12,11 @@ function PaddleController:onUpdate(dt)
     local xPos = self.entity:getPosition()
 
     local xVel = 0
-    if (Input.isKeyPressed(Input.Key.A) and xPos - xScale / 2 > -self.XConstrain) then
+    if (Input.isKeyPressed(Input.Key.A) and
+        xPos - xScale / 2 > -self.XConstrain) then
         xVel = -self.Speed
-    elseif (Input.isKeyPressed(Input.Key.D) and xPos + xScale / 2 < self.XConstrain) then
+    elseif (Input.isKeyPressed(Input.Key.D) and
+            xPos + xScale / 2 < self.XConstrain) then
         xVel = self.Speed
     end
 

@@ -1,11 +1,11 @@
-BallController = LuaScript:create()
+BallController = {}
 
 BallController.Speed = 10
 
 function BallController:onCreate()
     math.randomseed(os.time())
 
-    self.rigidbody = self:getComponent(ComponentTypeID.Rigidbody2D)
+    self.rigidbody = self.entity:getComponent(ComponentTypeID.Rigidbody2D)
 end
 
 BallController.started = false;

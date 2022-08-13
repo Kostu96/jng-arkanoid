@@ -1,4 +1,4 @@
-BlockSpawner = LuaScript:create()
+BlockSpawner = {}
 
 BlockSpawner.Columns = 13
 BlockSpawner.Rows = 7
@@ -9,7 +9,7 @@ function BlockSpawner:onCreate()
 
     for c = 0, self.Columns - 1 do
         for r = 0, self.Rows - 1 do
-            local block = self:createEntity("Block" .. c .. r)
+            local block = self.scene:createEntity("Block" .. c .. r)
             block:scale(2, 0.5, 1)
             block:setPosition(
                 xPos + (2 + self.Spacing) * c,
