@@ -16,9 +16,9 @@ function BlockSpawner:onCreate()
                 yPos - (0.5 + self.Spacing) * r,
                 0
             )
-            block:addComponent(Component.SpriteRenderer)
-            block:addComponent(Component.Rigidbody2D)
-            block:addComponent(Component.BoxCollider2D)
+            block:addComponent(ComponentTypeID.SpriteRenderer)
+            block:addComponent(ComponentTypeID.Rigidbody2D)
+            block:addComponent(ComponentTypeID.BoxCollider2D)
         end
     end
 end

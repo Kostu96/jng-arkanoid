@@ -4,7 +4,7 @@ PaddleController.Speed = 10
 PaddleController.XConstrain = 13.75
 
 function PaddleController:onCreate()
-    self.rigidbody = self:getComponent(Component.Rigidbody2D)
+    self.rigidbody = self:getComponent(ComponentTypeID.Rigidbody2D)
 end
 
 function PaddleController:onUpdate(dt)

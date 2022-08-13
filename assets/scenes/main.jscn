@@ -1,117 +1,32 @@
 Scene: main
 Entities:
-  - Entity: 7919760356240806629
+  - Entity: 9229324913916980023
     TagComponent:
-      Tag: Ball
+      Tag: BlockSpawner
     TransformComponent:
-      Translation: [0, 0, 0]
-      Rotation: [0, 0, 0]
-      Scale: [0.300000012, 0.300000012, 1]
-    CircleRendererComponent:
-      Color: [0.244244292, 0.818548381, 0.498975843, 1]
-      Thickness: 1
-      Fade: 0.00499999989
-    CircleCollider2DComponent:
-      Radius: 0.5
-      Offset: [0, 0]
-      Density: 1
-      Friction: 0
-      Restitution: 1
-      RestitutionThreshold: 0.5
-    Rigidbody2DComponent:
-      BodyType: 2
-      Enabled: true
-      FreezeRotation: true
-      LinearDamping: 0
-      AngularDamping: 0
-      GravityScale: 0
-    LuaScriptComponent:
-      Name: BallController
-      ScriptData:
-        HasOnCreate: true
-        HasOnUpdate: true
-        Properties:
-          - Name: Speed
-            Type: 0
-            Value: 10
-  - Entity: 15346625625685970642
-    TagComponent:
-      Tag: Paddle
-    TransformComponent:
-      Translation: [0, -8, 0]
-      Rotation: [0, 0, 0]
-      Scale: [2, 0.300000012, 1]
-    SpriteRendererComponent:
-      Color: [1, 1, 1, 1]
-    BoxCollider2DComponent:
-      Size: [0.5, 0.5]
-      Offset: [0, 0]
-      Density: 1
-      Friction: 0
-      Restitution: 0
-      RestitutionThreshold: 0.5
-    Rigidbody2DComponent:
-      BodyType: 1
-      Enabled: true
-      FreezeRotation: true
-      LinearDamping: 0
-      AngularDamping: 0
-      GravityScale: 0
-    LuaScriptComponent:
-      Name: PaddleController
-      ScriptData:
-        HasOnCreate: true
-        HasOnUpdate: true
-        Properties:
-          - Name: Speed
-            Type: 0
-            Value: 10
-          - Name: XConstrain
-            Type: 0
-            Value: 13.75
-  - Entity: 13981854952416655774
-    TagComponent:
-      Tag: Camera
-    TransformComponent:
-      Translation: [0, 0, 0.5]
+      Translation: [-12.6000004, 8.30000019, -6.10351562e-05]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
-    CameraComponent:
-      ProjectionType: 0
-      OrthographicSize: 18
-      OrthographicNear: -1
-      OrthographicFar: 1
-      PerspectiveFOV: 45
-      PerspectiveNear: 0.00999999978
-      PerspectiveFar: 1000
-  - Entity: 10055188281328936660
+    LuaScriptComponent:
+      Name: BlockSpawner
+      ScriptData:
+        HasOnCreate: true
+        HasOnUpdate: false
+        Properties:
+          - Name: Columns
+            Type: 0
+            Value: 13
+          - Name: Rows
+            Type: 0
+            Value: 7
+          - Name: Spacing
+            Type: 0
+            Value: 0.10000000000000001
+  - Entity: 7090462914834539441
     TagComponent:
-      Tag: TopWall
+      Tag: RightWall
     TransformComponent:
-      Translation: [0, 9, 0]
-      Rotation: [0, 0, 0]
-      Scale: [28, 0.5, 1]
-    SpriteRendererComponent:
-      Color: [0.784313738, 0.784313738, 0.784313738, 1]
-    BoxCollider2DComponent:
-      Size: [0.5, 0.5]
-      Offset: [0, 0]
-      Density: 1
-      Friction: 0.5
-      Restitution: 0
-      RestitutionThreshold: 0.5
-    Rigidbody2DComponent:
-      BodyType: 0
-      Enabled: true
-      FreezeRotation: false
-      LinearDamping: 0.100000001
-      AngularDamping: 0.100000001
-      GravityScale: 1
-  - Entity: 6226378662288558469
-    TagComponent:
-      Tag: LeftWall
-    TransformComponent:
-      Translation: [-14, 0, 0]
+      Translation: [14, 0, 0]
       Rotation: [0, 0, 0]
       Scale: [0.5, 18, 1]
     SpriteRendererComponent:
@@ -153,11 +68,11 @@ Entities:
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
       GravityScale: 1
-  - Entity: 7090462914834539441
+  - Entity: 6226378662288558469
     TagComponent:
-      Tag: RightWall
+      Tag: LeftWall
     TransformComponent:
-      Translation: [14, 0, 0]
+      Translation: [-14, 0, 0]
       Rotation: [0, 0, 0]
       Scale: [0.5, 18, 1]
     SpriteRendererComponent:
@@ -176,25 +91,110 @@ Entities:
       LinearDamping: 0.100000001
       AngularDamping: 0.100000001
       GravityScale: 1
-  - Entity: 9229324913916980023
+  - Entity: 10055188281328936660
     TagComponent:
-      Tag: BlockSpawner
+      Tag: TopWall
     TransformComponent:
-      Translation: [-12.6000004, 8.30000019, -6.10351562e-05]
+      Translation: [0, 9, 0]
+      Rotation: [0, 0, 0]
+      Scale: [28, 0.5, 1]
+    SpriteRendererComponent:
+      Color: [0.784313738, 0.784313738, 0.784313738, 1]
+    BoxCollider2DComponent:
+      Size: [0.5, 0.5]
+      Offset: [0, 0]
+      Density: 1
+      Friction: 0.5
+      Restitution: 0
+      RestitutionThreshold: 0.5
+    Rigidbody2DComponent:
+      BodyType: 0
+      Enabled: true
+      FreezeRotation: false
+      LinearDamping: 0.100000001
+      AngularDamping: 0.100000001
+      GravityScale: 1
+  - Entity: 13981854952416655774
+    TagComponent:
+      Tag: Camera
+    TransformComponent:
+      Translation: [0, 0, 0.5]
       Rotation: [0, 0, 0]
       Scale: [1, 1, 1]
+    CameraComponent:
+      ProjectionType: 0
+      OrthographicSize: 18
+      OrthographicNear: -1
+      OrthographicFar: 1
+      PerspectiveFOV: 45
+      PerspectiveNear: 0.00999999978
+      PerspectiveFar: 1000
+  - Entity: 15346625625685970642
+    TagComponent:
+      Tag: Paddle
+    TransformComponent:
+      Translation: [0, -8, 0]
+      Rotation: [0, 0, 0]
+      Scale: [2, 0.300000012, 1]
+    SpriteRendererComponent:
+      Color: [1, 1, 1, 1]
+    BoxCollider2DComponent:
+      Size: [0.5, 0.5]
+      Offset: [0, 0]
+      Density: 1
+      Friction: 0
+      Restitution: 0
+      RestitutionThreshold: 0.5
+    Rigidbody2DComponent:
+      BodyType: 1
+      Enabled: true
+      FreezeRotation: true
+      LinearDamping: 0
+      AngularDamping: 0
+      GravityScale: 0
     LuaScriptComponent:
-      Name: BlockSpawner
+      Name: PaddleController
       ScriptData:
         HasOnCreate: true
-        HasOnUpdate: false
+        HasOnUpdate: true
         Properties:
-          - Name: Columns
+          - Name: Speed
             Type: 0
-            Value: 13
-          - Name: Rows
+            Value: 10
+          - Name: XConstrain
             Type: 0
-            Value: 7
-          - Name: Spacing
+            Value: 13.75
+  - Entity: 7919760356240806629
+    TagComponent:
+      Tag: Ball
+    TransformComponent:
+      Translation: [0, 0, 0]
+      Rotation: [0, 0, 0]
+      Scale: [0.300000012, 0.300000012, 1]
+    CircleRendererComponent:
+      Color: [0.244244292, 0.818548381, 0.498975843, 1]
+      Thickness: 1
+      Fade: 0.00499999989
+    CircleCollider2DComponent:
+      Radius: 0.5
+      Offset: [0, 0]
+      Density: 1
+      Friction: 0
+      Restitution: 1
+      RestitutionThreshold: 0.5
+    Rigidbody2DComponent:
+      BodyType: 2
+      Enabled: true
+      FreezeRotation: true
+      LinearDamping: 0
+      AngularDamping: 0
+      GravityScale: 0
+    LuaScriptComponent:
+      Name: BallController
+      ScriptData:
+        HasOnCreate: true
+        HasOnUpdate: true
+        Properties:
+          - Name: Speed
             Type: 0
-            Value: 0.10000000149011612
+            Value: 10

@@ -5,7 +5,7 @@ BallController.Speed = 10
 function BallController:onCreate()
     math.randomseed(os.time())
 
-    self.rigidbody = self:getComponent(Component.Rigidbody2D)
+    self.rigidbody = self:getComponent(ComponentTypeID.Rigidbody2D)
 end
 
 BallController.started = false;
